@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/utils/dimensions.dart';
 import '../home/food_page_body.dart';
 import '../utils/colors.dart';
 import '../widgets/big_text.dart';
@@ -20,7 +21,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
           Container(
             child: Container(
               margin: const EdgeInsets.only(top: 45, bottom: 15),
-              padding: const EdgeInsets.only(left: 20, right: 20),
+              padding: EdgeInsets.only(
+                  left: Dimension.width20, right: Dimension.width20),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -41,12 +43,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     ]),
                     Center(
                       child: Container(
-                        height: 45,
-                        width: 45,
-                        child: const Icon(Icons.search, color: Colors.white),
+                        height: Dimension.height45,
+                        width: Dimension.height45,
+                        child: Icon(Icons.search,
+                            color: Colors.white, size: Dimension.iconSize24),
                         decoration: BoxDecoration(
                           color: AppColors.mainColor,
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius:
+                              BorderRadius.circular(Dimension.radius15),
                         ),
                       ),
                     )
